@@ -17,6 +17,13 @@ public class CameraController : MonoBehaviour
     // Ref to pivot point
     public Transform pivot;
 
+    //Max/Min view angle for camera view
+    public float maxViewAngle;
+    public float minViewAngle;
+
+    //invert option, look up when mouse goes up, or reverse
+    public bool invertY;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +53,30 @@ public class CameraController : MonoBehaviour
 
         // Get the y position of mouse & rotate target
         float vertical = Input.GetAxis("Mouse Y") * rotateSpeed;
-        pivot.Rotate(-vertical, 0, 0);
+
+        //pivot.Rotate(-vertical, 0, 0);
+        //invert option
+        if (invertY)
+        {
+            pivot.Rotate(vertical, 0, 0);
+        }
+        else
+        {
+            pivot.Rotate(-vertical, 0, 0);
+        }
+
+
+
+        //  Limit the up/down camera rotation 
+        if (pivot.rotation.eulerAngles.x > maxViewAngle && pivot.rotation.eulerAngles.x < 180f)
+        {
+            pivot.rotation = Quaternion.Euler(maxViewAngle, 0, 0);
+        }
+
+        if (pivot.rotation.eulerAngles.x > maxViewAngle && pivot.rotation.eulerAngles.x < 360f + minViewAngle)
+        {
+            pivot.rotation = Quaternion.Euler(360f + maxViewAngle, 0, 0);
+        }
 
         // Move camera based on curr rotation of target & og offset
         float desiredYAngle = target.eulerAngles.y;
