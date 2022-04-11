@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
 
     public float gravityScale;
 
+    //animator variable
+    public Animator anim;
+
 
     // Start is called before the first frame update (init)
     void Start()
@@ -78,5 +81,8 @@ public class PlayerController : MonoBehaviour
         // Slow movement to time from last frame
         // Smooth out so all platforms get same exp
         controller.Move(moveDirection * Time.deltaTime);
+
+        anim.SetBool("isGrounded", controller.isGrounded);
+        anim.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
     }
 }
