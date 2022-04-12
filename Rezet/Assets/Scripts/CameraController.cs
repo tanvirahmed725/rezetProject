@@ -34,8 +34,8 @@ public class CameraController : MonoBehaviour
         pivot.transform.position = target.transform.position;
 
         // Set pivot child of player
-        pivot.transform.parent = target.transform;
-
+        //pivot.transform.parent = target.transform;
+        pivot.transform.parent = null;
         // Hide the mouse when scene starts up 
         Cursor.lockState = CursorLockMode.Locked;
         
@@ -45,9 +45,10 @@ public class CameraController : MonoBehaviour
     // LateUpdate happens after update
     void LateUpdate()
     {
+        pivot.transform.position = target.transform.position;
         // Get the x position of mouse & rotate target
         float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
-        target.Rotate(0, horizontal, 0);
+        pivot.Rotate(0, horizontal, 0);
 
         // Get the Y pos of mouse & rotate the pivot 
 
@@ -79,7 +80,7 @@ public class CameraController : MonoBehaviour
         }
 
         // Move camera based on curr rotation of target & og offset
-        float desiredYAngle = target.eulerAngles.y;
+        float desiredYAngle = pivot.eulerAngles.y;
         float desiredXAngle = pivot.eulerAngles.x;
 
         Quaternion rotation = Quaternion.Euler(desiredXAngle, desiredYAngle, 0);
