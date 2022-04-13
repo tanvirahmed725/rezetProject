@@ -666,7 +666,10 @@ MonoBehaviour:
   gravityScale: 5
   anim: {fileID: 146094539}
   pivot: {fileID: 2114983088}
-  rotateSpeed: 10
+  rotateSpeed: 25
+  playerModel: {fileID: 146094537}
+  knockBackForce: 20
+  knockBackTime: 1
 --- !u!1 &874286389
 GameObject:
   m_ObjectHideFlags: 0
