@@ -82,3 +82,4 @@ Material:
     - _DeepColor: {r: 0.2511125, g: 0.7187613, b: 0.9339623, a: 1}
     - _ShalowColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
