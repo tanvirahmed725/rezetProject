@@ -45,6 +45,12 @@ public class CameraController : MonoBehaviour
     // LateUpdate happens after update
     void LateUpdate()
     {
+        // Stop camera if game is paused 
+        if (PauseMenu.GameIsPaused)
+		{
+            return;
+		}
+
         pivot.transform.position = target.transform.position;
         // Get the x position of mouse & rotate target
         float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
