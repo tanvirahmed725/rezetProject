@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject mainMenuCanvas;
+
     public string firstLevel;
 
     public void PlayGame()
     {
+        mainMenuCanvas.SetActive(false);
         SceneManager.LoadScene(firstLevel);
     }
 
