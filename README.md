@@ -1,7 +1,6 @@
 # REZET
 3D platformer made for our Human Computer Interactions Class
 
-Developer
 ## Developers
 - Tanvir Ahmed gw3139
 - Abdul Mahbub go4374
