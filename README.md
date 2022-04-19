@@ -3,8 +3,8 @@
 
 Developer
 ## Developers
-Tanvir Ahmed gw3139
-Abdul Mahbub go4374
+- Tanvir Ahmed gw3139
+- Abdul Mahbub go4374
 
 ## Assets Used
 ### Fantasy Exploration Music by Jared Alexander Johnson
