@@ -5,6 +5,9 @@
 - Tanvir Ahmed gw3139
 - Abdul Mahbub go4374
 
+## Usage
+- Unity lighting bug when building from Maine Menu Scene, to avoid this bug, build from scene: Level 01.
+
 ## Assets Used
 ### Fantasy Exploration Music by Jared Alexander Johnson
 https://assetstore.unity.com/packages/audio/music/orchestral/fantasy-exploration-music-213668
