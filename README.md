@@ -11,3 +11,4 @@ https://assetstore.unity.com/packages/audio/music/orchestral/fantasy-exploration
 ### Simple Low Poly Nature Pack by NeutronCat
 https://assetstore.unity.com/packages/3d/environments/landscapes/simple-low-poly-nature-pack-157552#description
 ### Character Pack: Free Sample by Supercyan
+https://assetstore.unity.com/packages/3d/characters/humanoids/character-pack-free-sample-79870
